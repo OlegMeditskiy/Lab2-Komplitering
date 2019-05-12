@@ -73,7 +73,7 @@ class App extends Component {
     const author = document.getElementById('author').value
     
     this.request(`key=${key}&op=insert&title=${title}&author=${author}`,  data=> {
-      console.log(data)
+     
       console.log("Book was added")
       
     }
