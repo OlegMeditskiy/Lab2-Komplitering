@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Header from './components/ui/Header/Header'
 import NewApiKey from './NewApiKey'
 import AddBook from './AddBook'
-import GetBooks, {getBooks} from './getBooks'
-import RemoveBook from './RemoveBook'
+import GetBooks from './getBooks'
+
 class App extends Component {
   render() {
     return (

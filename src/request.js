@@ -1,6 +1,3 @@
-import {GetBooks} from './getBooks'
-import React, { Component } from 'react'
-
 export default function request(qs, cb, limit = 10) {
     const url = 'https://www.forverkliga.se/JavaScript/api/crud.php?'
     fetch(`${url}${qs}`)

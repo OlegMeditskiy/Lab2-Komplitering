@@ -1,4 +1,3 @@
-import update from './App'
 import React, { Component } from 'react'
 import RemoveBook from './RemoveBook'
  export default class GetBooks extends Component{
