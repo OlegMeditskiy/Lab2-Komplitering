@@ -11,20 +11,9 @@ class App extends Component {
         <Header />
         <NewApiKey/>
         <AddBook/>
-        <div className="display-books">
-          <div className="container">
-            <div className="col-12">
-              <ul className="list-group">
-                <li key="Info" className="list-item list-group-item d-flex align-items-center">
-                  <strong className="title">Title</strong>
-                  <div className="author"><strong>Author</strong></div>
-                  <div className="buttons"><strong>Delete </strong></div>
-                </li>
+        
                 <GetBooks/>
-              </ul>
-            </div>
-          </div>
-        </div>
+             
       </div>
     )
   }
