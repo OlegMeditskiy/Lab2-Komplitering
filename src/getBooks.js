@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import RemoveBook from './RemoveBook'
+import DisplayBooks from './displayBooks'
  export default class GetBooks extends Component{
     constructor(props) {
         super(props);
@@ -43,20 +44,10 @@ import RemoveBook from './RemoveBook'
       }
      render(){
          return(
-            <div className="display-books">
-            <div className="container">
-              <div className="col-12">
-                <ul className="list-group">
-                  <li key="Info" className="list-item list-group-item d-flex align-items-center">
-                    <strong className="title">Title</strong>
-                    <div className="author"><strong>Author</strong></div>
-                    <div className="buttons"><strong>Delete </strong></div>
-                  </li>
-            {this.addListItem()}
-            </ul>
-            </div>
-          </div>
-        </div>
+             <div>
+                 <DisplayBooks method = {this.addListItem()}/>
+             </div>
+            
          )
      }
  }
