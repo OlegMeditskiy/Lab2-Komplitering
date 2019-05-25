@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import RemoveBook from './RemoveBook'
 import DisplayBooks from './displayBooks'
-import GetBooks2 from './GetBooks'
+import GetBooks2 from './GetBook'
 import AddBook from './AddBook';
  export default class Forms extends Component{
     constructor(props) {
