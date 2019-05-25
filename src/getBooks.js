@@ -1,50 +1,16 @@
-import React, { Component } from 'react'
-import RemoveBook from './RemoveBook'
-import DisplayBooks from './displayBooks'
-import GetBooks2 from './getBooks2'
- export default class GetBooks extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-          list: []
-        }
-        this.update = this.update.bind(this);
-        this.addListItem = this.addListItem.bind(this)
-        GetBooks2(this.update)
-      }
-      update(newList) {
-        this.setState({ list: newList},()=>{})
-        //,()=>{GetBooks2(this.update)}
-    }
-    
-      addListItem() {
-        try {
-          return this.state.list.map(book => {
-            return (
+import { tsPropertySignature } from "@babel/types";
 
-              <li key={book.id} className="list-item list-group-item d-flex align-items-center">
-                <strong className="title">{book.title}</strong>
-                <div className="author">{book.author}</div>
-                <div className="buttons">
-                  <button type="submit" className="btn btn-danger" onClick={event => RemoveBook(event, book.id)}>
-                    Ta bort
-            </button>
-                </div>
-              </li>
-            )
-          })
-        } catch (err) {
-          console.log("ERRRRRRRRRRRRRRRRR")
-          console.log(err)
+export default function GetBooks2(callback) {
+    const url = "https://www.forverkliga.se/JavaScript/api/crud.php?"
+    const key = localStorage.getItem('apiKey')
+    fetch(url + "key=" + key + '&op=select')
+      .then(response => response.json())
+      .then(result => {
+        if (result.status === "success") {
+            callback(result.data)
+          //this.setState({ list: result.data })
+        } else if (result.status === "error") {
+          GetBooks2(callback)
         }
-      }
-     render(){
-         return(
-             <div>
-                 <button className="btn btn-danger" onClick={() => GetBooks2(this.update)}>Get My Books</button>
-                 <DisplayBooks method = {this.addListItem()}/>
-             </div>
-            
-         )
-     }
- }
+      })
+  }

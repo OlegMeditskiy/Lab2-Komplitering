@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/ui/Header/Header'
 import NewApiKey from './NewApiKey'
-import AddBook from './AddBook'
-import GetBooks from './getBooks'
+import Forms from './Forms'
 
 class App extends Component {
   render() {
@@ -10,8 +9,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <NewApiKey />
-        <AddBook />
-        <GetBooks />
+        <Forms />
       </div>
     )
   }

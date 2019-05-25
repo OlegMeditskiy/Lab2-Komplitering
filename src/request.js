@@ -1,4 +1,4 @@
-import GetBooks from './getBooks'
+import GetBooks from './Forms'
 export default function request(qs, cb, limit = 10) {
     const url = 'https://www.forverkliga.se/JavaScript/api/crud.php?'
     fetch(`${url}${qs}`)
