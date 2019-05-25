@@ -14,9 +14,6 @@ import GetBooks2 from './getBooks2'
       update(newList) {
         this.setState({ list: newList });
     }
-      getBooks() {
-        GetBooks2(this.update)
-      }
       addListItem() {
         try {
           return this.state.list.map(book => {
