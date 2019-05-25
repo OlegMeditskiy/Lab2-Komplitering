@@ -1,3 +1,4 @@
+import GetBooks from './getBooks'
 export default function request(qs, cb, limit = 10) {
     const url = 'https://www.forverkliga.se/JavaScript/api/crud.php?'
     fetch(`${url}${qs}`)
@@ -9,6 +10,7 @@ export default function request(qs, cb, limit = 10) {
           if (cb) {
             cb(data)
           }
+          
         } else if (limit > 0) {
             request(qs, cb, limit - 1)
         } 

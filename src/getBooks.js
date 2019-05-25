@@ -9,15 +9,19 @@ import GetBooks2 from './getBooks2'
           list: []
         }
         this.update = this.update.bind(this);
+        this.addListItem = this.addListItem.bind(this)
         GetBooks2(this.update)
       }
       update(newList) {
-        this.setState({ list: newList });
+        this.setState({ list: newList},()=>{})
+        //,()=>{GetBooks2(this.update)}
     }
+    
       addListItem() {
         try {
           return this.state.list.map(book => {
             return (
+
               <li key={book.id} className="list-item list-group-item d-flex align-items-center">
                 <strong className="title">{book.title}</strong>
                 <div className="author">{book.author}</div>
@@ -37,6 +41,7 @@ import GetBooks2 from './getBooks2'
      render(){
          return(
              <div>
+                 <button className="btn btn-danger" onClick={() => GetBooks2(this.update)}>Get My Books</button>
                  <DisplayBooks method = {this.addListItem()}/>
              </div>
             
