@@ -1,26 +1,21 @@
 import React, { Component } from 'react'
 import RemoveBook from './RemoveBook'
 import DisplayBooks from './displayBooks'
+import GetBooks2 from './getBooks2'
  export default class GetBooks extends Component{
     constructor(props) {
         super(props);
-        this.getBooks()
         this.state = {
           list: []
         }
+        this.update = this.update.bind(this);
+        GetBooks2(this.update)
       }
+      update(newList) {
+        this.setState({ list: newList });
+    }
       getBooks() {
-        const url = "https://www.forverkliga.se/JavaScript/api/crud.php?"
-        const key = localStorage.getItem('apiKey')
-        fetch(url + "key=" + key + '&op=select')
-          .then(response => response.json())
-          .then(result => {
-            if (result.status === "success") {
-              this.setState({ list: result.data })
-            } else if (result.status === "error") {
-              this.getBooks()
-            }
-          })
+        GetBooks2(this.update)
       }
       addListItem() {
         try {
