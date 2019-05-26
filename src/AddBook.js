@@ -1,5 +1,4 @@
 import request from './request'
-import React, { Component } from 'react'
 import GetBooks2 from './GetBook'
 export default  function AddBook(event,callback) {
     const key = localStorage.getItem('apiKey')

@@ -1,5 +1,3 @@
-import { tsPropertySignature } from "@babel/types";
-
 export default function GetBooks2(callback) {
     const url = "https://www.forverkliga.se/JavaScript/api/crud.php?"
     const key = localStorage.getItem('apiKey')
