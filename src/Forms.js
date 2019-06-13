@@ -27,7 +27,7 @@ import AddBook from './AddBook';
                 <div className="author">{book.author}</div>
                 <div className="buttons">
                   <button type="submit" className="btn btn-danger" onClick={event => RemoveBook(event, book.id, this.update)}>
-                    Ta bort
+                    Delete
             </button>
                 </div>
               </li>
@@ -44,14 +44,14 @@ import AddBook from './AddBook';
             <div className="container">
               <div className="row form-section">
                 <div className="book-form col-6">
-                  <legend>Lägg till dina favoritböcker</legend>
+                  <legend>Add new book</legend>
                   <div className="form-group">
                     <input
                       type="text"
                       className="form-control"
                       id="title"
                       aria-describedby="title"
-                      placeholder="Lägg till titel"
+                      placeholder="Title"
                     />
                     <input
                       type="text"
@@ -62,7 +62,7 @@ import AddBook from './AddBook';
                       data-txt_gramm_id="63b74fb6-c7e4-7f0e-0c1f-438d47ac87a0"
                       data-gramm_id="63b74fb6-c7e4-7f0e-0c1f-438d47ac87a0"
                       data-gramm_editor="true"
-                      placeholder="Lägg till författare"
+                      placeholder="Author"
                     />
                   </div>
                   <button
@@ -71,7 +71,7 @@ import AddBook from './AddBook';
                     className="btn btn-primary btn-lg btn-block"
                     onClick={event => AddBook(event,this.update)}
                   >
-                    Skicka
+                    Send
                     </button>
                 </div>
               </div>
