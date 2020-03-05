@@ -20,25 +20,6 @@ code {
     monospace;
 }
 
-#btn1{
-  background-color: green;
-  float: left;
-  height: 50px;
-}
-#Key{
-  background-color: white;
-  width: 200px;
-  margin-left: 43%;
-  text-align: center;
-}
-#Message{
-  background-color: white;
-  width: 200px;
-  margin-left: 43%;
-  text-align: center;
-}
-
-
 header strong {
   color: #fff;
   margin-right: 10px;

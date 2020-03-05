@@ -1,4 +1,4 @@
-export default function GetBooks2(callback) {
+export default function GetBooks(callback) {
     const url = "https://www.forverkliga.se/JavaScript/api/crud.php?"
     const key = localStorage.getItem('apiKey')
     fetch(url + "key=" + key + '&op=select')
@@ -8,7 +8,7 @@ export default function GetBooks2(callback) {
             callback(result.data)
           //this.setState({ list: result.data })
         } else if (result.status === "error") {
-          GetBooks2(callback)
+          GetBooks(callback)
         }
       })
   }
